@@ -37,7 +37,7 @@ class ConfigurationRepository(context: Context, lifecycleOwner: LifecycleOwner, 
     val showShifters = MutableStateFlow(true)
     val shifterInset = MutableStateFlow(0f)
     private val mutableBleTxEnabled = MutableStateFlow(true)
-    private val mutableDirConEnabled = MutableStateFlow(true)
+    private val mutableDirConEnabled = MutableStateFlow(false)
     private val mutableBleFtmsDeviceName = MutableStateFlow("Grupetto FTMS")
     private val mutableAntPlusTxEnabled = MutableStateFlow(false)
     private val mutableAutoStartOnBoot = MutableStateFlow(false)
@@ -171,7 +171,7 @@ class ConfigurationRepository(context: Context, lifecycleOwner: LifecycleOwner, 
 
         mutableDirConEnabled.value =
             sharedPreferences
-                .getBoolean(Preferences.DirConEnabled.key, true)
+                .getBoolean(Preferences.DirConEnabled.key, false)
 
         mutableBleFtmsDeviceName.value =
             sharedPreferences

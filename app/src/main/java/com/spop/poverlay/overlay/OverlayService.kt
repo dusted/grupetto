@@ -504,7 +504,7 @@ class OverlayService : LifecycleEnabledService() {
 
     private fun isDirConEnabled(): Boolean {
         val prefs = getSharedPreferences(ConfigurationRepository.SharedPrefsName, MODE_PRIVATE)
-        return prefs.getBoolean(ConfigurationRepository.Preferences.DirConEnabled.key, true)
+        return prefs.getBoolean(ConfigurationRepository.Preferences.DirConEnabled.key, false)
     }
 
     private fun hasBleRuntimePermissions(): Boolean {

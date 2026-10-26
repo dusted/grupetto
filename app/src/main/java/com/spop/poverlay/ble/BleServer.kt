@@ -111,7 +111,7 @@ class BleServer(
     private var advertiser: BluetoothLeAdvertiser? = null
     private val registeredServices = mutableListOf<BaseBleService>()
     private var dirConServer: DirConServer? = null
-    private var dirConTransportEnabled = true
+    private var dirConTransportEnabled = false
     private var isDirConOnlyStarted = false
     private val servicesToRegister = LinkedList<BaseBleService>()
     private var currentlyRegisteringService: BaseBleService? = null
